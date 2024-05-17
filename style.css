@@ -1,0 +1,118 @@
+body {
+  background: rgb(246, 242, 255);
+  background: linear-gradient(
+    139deg,
+    rgba(246, 242, 255, 1) 0%,
+    rgba(246, 242, 255, 1) 35%,
+    rgba(204, 167, 225, 1) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > .logo {
+  display: flex;
+  padding: 0 40px;
+}
+.header > .logo > img {
+  height: 40px;
+}
+.header > .header-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 40px;
+  gap: 30px;
+}
+.header > .header-right > a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.header > .header-right > a:hover {
+  background-color: #f6f2ff;
+  border: 1px solid transparent;
+  background: linear-gradient(#f6f2ff, #f6f2ff) padding-box,
+    linear-gradient(60deg, #4f72e5, #8658e7) border-box;
+}
+.header > .header-right > .button > .btn {
+  background: linear-gradient(#f6f2ff, #f6f2ff) padding-box,
+    linear-gradient(60deg, #4f72e5, #8658e7) border-box;
+  color: #313149;
+  padding: 8px 15px;
+  border: 2px solid transparent;
+  display: inline-block;
+  font-size: 12px;
+}
+.content {
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > img {
+  height: 600px;
+}
+@media screen and (max-width: 500px) {
+  .header > .header-right {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header > .logo {
+    display: flex;
+  }
+  .header > .logo > img {
+    height: 30px;
+  }
+  .header > .header-right > a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .content > img {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header > .header-right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .header > .logo {
+    display: flex;
+  }
+  .header > .logo > img {
+    height: 20px;
+  }
+  .header > .header-right > a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .content > img {
+    height: 300px;
+  }
+  .header {
+    display: flex;
+  }
+}
